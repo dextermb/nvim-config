@@ -32,7 +32,8 @@ return {
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim"
+      "MunifTanjim/nui.nvim",
+      "nvim-mini/mini.icons",
     },
     config = function(_, opts)
       require("neo-tree").setup(opts)
