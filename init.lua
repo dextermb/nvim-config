@@ -21,6 +21,9 @@ vim.opt.number = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", lead = "·", trail = "·" }
 
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 100
+
 require("config.lazy")
 require("config.autocmds")
 require("config.keymaps")
