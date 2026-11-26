@@ -7,3 +7,15 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagn
 
 vim.keymap.set({"n", "x"}, "<leader>j", 'J', { desc = 'Join lines' })
 vim.keymap.set("n", "<leader>J", "i<CR><Esc>==", { desc = "Split line at cursor" })
+
+vim.keymap.set('n', '<leader>yp', function()
+  local path = vim.fn.expand('%:.')
+  vim.fn.setreg('+', path)
+  vim.notify('Copied: ' .. path)
+end, { desc = 'Yank buffer relative path' })
+
+vim.keymap.set('n', '<leader>yP', function()
+  local path = vim.fn.expand('%:p')
+  vim.fn.setreg('+', path)
+  vim.notify('Copied: ' .. path)
+end, { desc = 'Yank buffer absolute path' })
